@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">monage</string>
+    <string name="app_name">Monage</string>
+    <string name="nombre">Nombre</string>
+    <string name="correo">Correo</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="registro">Registro</string>
+    <string name="sesion">Iniciar sesion</string>
+    <string name="cuenta">Crear cuenta</string>
+    <string name="registrar">Registrarse</string>
+    <string name="enviar">Enviar</string>
+    <string name="inversion">Inversiones</string>
+    <string name="utilidades">Utilidades</string>
+    <string name="inverdispo">Inversiones disponibles</string>
+    <string name="dineroinver">Dinero invertido en acciones</string>
+    <string name="pedirecu">Pedir recursos</string>
+    <string name="pedir">Pedir</string>
+    <string name="volver">Volver</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

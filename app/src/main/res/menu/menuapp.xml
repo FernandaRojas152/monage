@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/principalItem"
+        android:title="Principal" />
+    <item
+        android:id="@+id/pagosItem"
+        android:title="Pagos" />
+    <item
+        android:id="@+id/accionesItem"
+        android:title="Acciones" />
+    <item
+        android:id="@+id/comunidadItem"
+        android:title="Comunidad" />
+</menu>

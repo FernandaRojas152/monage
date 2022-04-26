@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "90518226150",
+    "project_id": "monage-478ca",
+    "storage_bucket": "monage-478ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90518226150:android:e80a0ef4eb11b986456727",
+        "android_client_info": {
+          "package_name": "edu.icesi.monage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90518226150-rdd93q6mosrc1iurm4ebfo9b57vsfbm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMzNCs7xw3MkkML8LzVud8XszxC5srPw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90518226150-rdd93q6mosrc1iurm4ebfo9b57vsfbm7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
