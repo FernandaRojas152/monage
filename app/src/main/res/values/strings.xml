@@ -15,6 +15,7 @@
     <string name="pedirecu">Pedir recursos</string>
     <string name="pedir">Pedir</string>
     <string name="volver">Volver</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="comida">Comida</string>
+    <string name="higiene">Higiene</string>
+    <string name="diversion">Diversion</string>
 </resources>

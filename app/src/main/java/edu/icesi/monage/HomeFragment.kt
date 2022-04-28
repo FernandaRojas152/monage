@@ -18,6 +18,14 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater,container,false)
+
+        binding.progressFood.setProgress(50,false)
+        binding.foodTxt.text = "${binding.progressFood.progress.toString()}${"%"}"
+        binding.progressHygiene.setProgress(100,false)
+        binding.hygieneTxt.text = "${binding.progressHygiene.progress.toString()}${"%"}"
+        binding.progressFun.setProgress(10,false)
+        binding.funTxt.text = "${binding.progressFun.progress.toString()}${"%"}"
+
         return binding.root
     }
 

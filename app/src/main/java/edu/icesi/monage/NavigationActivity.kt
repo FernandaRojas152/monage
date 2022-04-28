@@ -26,7 +26,7 @@ class NavigationActivity : AppCompatActivity() {
         transactionsFragment = TransactionsFragment.newInstance()
         communityFragment = CommunityFragment.newInstance()
 
-        showFragment(paymentsFragment)
+        showFragment(homeFragment)
 
         binding.navigatorBtn.setOnItemSelectedListener { menuItem ->
             if (menuItem.itemId == R.id.principalItem) {

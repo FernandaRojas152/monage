@@ -10,4 +10,7 @@
     <color name="principal">#6A5CF7</color>
     <color name="text">#F1F1F1</color>
     <color name="botons">#1AC565</color>
+    <color name="food">#FF9E39</color>
+    <color name="hygiene">#00E779</color>
+    <color name="fun">#FF7B84</color>
 </resources>
