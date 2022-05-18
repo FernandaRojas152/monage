@@ -9,6 +9,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import edu.icesi.monage.databinding.ActivityRegistrationBinding
+import edu.icesi.monage.model.State
 import edu.icesi.monage.model.User
 
 class RegistrationActivity : AppCompatActivity() {
@@ -26,7 +27,7 @@ class RegistrationActivity : AppCompatActivity() {
             val email = binding.correoET.text.toString()
             val pass = binding.passwordET.text.toString()
             Log.e("<<<<<", binding.correoET.text.toString())
-            if (binding.nameET.text.toString() != "" && binding.correoET.text.toString() != "" && binding.passwordET.text.toString() != ""){
+            if (binding.nameET.text.toString() != "" && binding.correoET.text.toString() != "" && binding.passwordET.text.toString() != "" && binding.usernameET.toString() != ""){
                 Firebase.auth.createUserWithEmailAndPassword(email, pass).addOnSuccessListener {
                     Toast.makeText(this, "Cuenta creada exitosamente", Toast.LENGTH_LONG).show()
                     registerUserData()
@@ -53,9 +54,17 @@ class RegistrationActivity : AppCompatActivity() {
         uid?.let {
             val user = User(
                 it,
+                binding.usernameET.text.toString(),
                 binding.nameET.text.toString(),
-                binding.correoET.text.toString()
+                binding.correoET.text.toString(),
+                0,
+                1500,
+                10,
+                60,
+                60,
+                60,
             )
+            user.state = State.calculateState(user.food,user.hygiene,user.hygiene)
             Firebase.firestore.collection("users").document(it).set(user).addOnSuccessListener {
                 startActivity(Intent(this, LoginActivity::class.java))
                 finish()
