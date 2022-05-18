@@ -5,7 +5,7 @@
       <map>
         <entry key="..\:/Users/Jose Luis/AndroidStudioProjects/monage/app/src/main/res/layout/activity_navigation.xml" value="0.12" />
         <entry key="..\:/Users/Jose Luis/AndroidStudioProjects/monage/app/src/main/res/layout/fragment_home.xml" value="0.2747603833865815" />
-        <entry key="..\:/Users/Jose Luis/AndroidStudioProjects/monage/app/src/main/res/layout/fragment_payments.xml" value="0.2" />
+        <entry key="..\:/Users/Jose Luis/AndroidStudioProjects/monage/app/src/main/res/layout/fragment_payments.xml" value="0.22" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/drawable/back.xml" value="0.176" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/drawable/back_splash.xml" value="0.1" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/drawable/backbtn.xml" value="0.1" />
@@ -19,11 +19,11 @@
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/drawable/selector.xml" value="0.1" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/activity_main.xml" value="0.152" />
-        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/activity_navigation.xml" value="0.8800000000000001" />
-        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/activity_registration.xml" value="0.2" />
+        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/activity_navigation.xml" value="0.2361111111111111" />
+        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/activity_registration.xml" value="0.264" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/activity_splash.xml" value="0.176" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_community.xml" value="0.6" />
-        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_payments.xml" value="0.72" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_transactions.xml" value="0.4" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/menu/menuapp.xml" value="0.264" />
