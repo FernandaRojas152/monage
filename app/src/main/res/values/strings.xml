@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Monage</string>
     <string name="nombre">Nombre</string>
+    <string name="username">Username</string>
     <string name="correo">Correo</string>
     <string name="contraseña">Contraseña</string>
     <string name="registro">Registro</string>
