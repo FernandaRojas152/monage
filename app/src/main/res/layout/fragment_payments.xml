@@ -152,33 +152,49 @@
             android:id="@+id/button7"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_marginStart="322dp"
+            android:layout_marginTop="418dp"
+            android:layout_marginEnd="7dp"
             android:background="@drawable/supermercado"
-            tools:layout_editor_absoluteX="322dp"
-            tools:layout_editor_absoluteY="418dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button8"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_marginStart="261dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="54dp"
             android:background="@drawable/spa"
-            tools:layout_editor_absoluteX="261dp"
-            tools:layout_editor_absoluteY="524dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="66dp"
+            android:layout_marginEnd="313dp"
             android:background="@drawable/parque"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="67dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button6"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="323dp"
             android:background="@drawable/trabajo"
-            tools:layout_editor_absoluteX="6dp"
-            tools:layout_editor_absoluteY="164dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
