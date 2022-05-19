@@ -44,8 +44,28 @@ class HomeFragment : Fragment() {
 
             withContext(Dispatchers.Main) {
                 binding.username.text = user.name
+
+                when(user.state){
+                    "FANTASTIC"->{
+                        binding.imageState.setImageResource(R.drawable.fantastico)
+                    }
+                    "HAPPY"->{
+                        binding.imageState.setImageResource(R.drawable.felicidad)
+                    }
+                    "NEUTRAL"->{
+                        binding.imageState.setImageResource(R.drawable.neutral)
+                    }
+                    "SAD"->{
+                        binding.imageState.setImageResource(R.drawable.triste)
+                    }
+                    "DYING"->{
+                        binding.imageState.setImageResource(R.drawable.dead)
+
+                    }
+                }
             }
         }
+
 
             return binding.root
     }
