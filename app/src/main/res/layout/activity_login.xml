@@ -7,8 +7,8 @@
     tools:context=".LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="712dp"
-        android:layout_height="602dp"
+        android:layout_width="410dp"
+        android:layout_height="496dp"
         android:layout_marginTop="48dp"
         android:background="@drawable/back"
         app:layout_constraintBottom_toBottomOf="parent"
