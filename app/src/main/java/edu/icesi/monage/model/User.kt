@@ -11,5 +11,6 @@ data class User(
     var food:Int=0,
     var hygiene:Int=0,
     var funny:Int=0,
+    var tiredness:Int=0,
     var state:String = State.NEU
 )

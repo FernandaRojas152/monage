@@ -6,14 +6,9 @@
         <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/drawable/backbtn.xml" value="0.1945" />
         <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/drawable/backet.xml" value="0.1945" />
         <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/drawable/selector.xml" value="0.1945" />
-        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/activity_login.xml" value="0.15" />
+        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/activity_navigation.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/activity_registration.xml" value="0.15" />
-        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/activity_splash.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/fragment_community.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/fragment_home.xml" value="0.22" />
-        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/fragment_payments.xml" value="0.2" />
-        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/fragment_transactions.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/fragment_payments.xml" value="0.2965250965250965" />
         <entry key="..\:/Users/Jose Luis/AndroidStudioProjects/monage/app/src/main/res/layout/activity_navigation.xml" value="0.12" />
         <entry key="..\:/Users/Jose Luis/AndroidStudioProjects/monage/app/src/main/res/layout/fragment_home.xml" value="0.2747603833865815" />
         <entry key="..\:/Users/Jose Luis/AndroidStudioProjects/monage/app/src/main/res/layout/fragment_payments.xml" value="0.22" />
@@ -40,10 +35,17 @@
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/menu/menuapp.xml" value="0.264" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.117" />
+        <entry key="..\:/monage/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/monage/app/src/main/res/layout/activity_navigation.xml" value="0.22" />
+        <entry key="..\:/monage/app/src/main/res/layout/activity_registration.xml" value="0.18" />
+        <entry key="..\:/monage/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/monage/app/src/main/res/layout/fragment_community.xml" value="0.33" />
+        <entry key="..\:/monage/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/monage/app/src/main/res/layout/fragment_payments.xml" value="0.22" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
