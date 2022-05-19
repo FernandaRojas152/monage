@@ -169,6 +169,19 @@
         app:layout_constraintTop_toTopOf="@+id/imageView15" />
 
     <ImageView
+        android:id="@+id/imagebackground"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="131dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:srcCompat="@drawable/back_splash" />
+
+    <ImageView
         android:id="@+id/imageState"
         android:layout_width="125dp"
         android:layout_height="125dp"
