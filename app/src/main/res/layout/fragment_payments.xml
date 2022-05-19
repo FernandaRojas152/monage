@@ -151,7 +151,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/market"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="322dp"
@@ -163,7 +163,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/spa"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="261dp"
@@ -175,7 +175,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/park"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
@@ -187,7 +187,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/job"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="6dp"
@@ -196,7 +196,7 @@
             android:background="@drawable/trabajo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button5" />
+            app:layout_constraintTop_toBottomOf="@+id/park" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
