@@ -5,7 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import edu.icesi.monage.databinding.FragmentHomeBinding
+import edu.icesi.monage.model.User
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
+
 
 class HomeFragment : Fragment() {
 
@@ -26,7 +36,18 @@ class HomeFragment : Fragment() {
         binding.progressFun.setProgress(calculateProgress(false,false,true),true)
         binding.funTxt.text = "${binding.progressFun.progress.toString()}${"%"}"
 
-        return binding.root
+        lifecycleScope.launch(Dispatchers.IO) {
+            val user = Firebase.firestore
+                .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
+                .toObject(User::class.java)!!
+
+
+            withContext(Dispatchers.Main) {
+                binding.username.text = user.name
+            }
+        }
+
+            return binding.root
     }
 
     private fun calculateProgress(food:Boolean,hygiene: Boolean, funn: Boolean): Int{

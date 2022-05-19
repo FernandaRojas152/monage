@@ -67,7 +67,6 @@ class RegistrationActivity : AppCompatActivity() {
             user.state = State.calculateState(user.food,user.hygiene,user.hygiene)
             Firebase.firestore.collection("users").document(it).set(user).addOnSuccessListener {
                 startActivity(Intent(this, LoginActivity::class.java))
-                finish()
             }
         }
     }

@@ -8,11 +8,6 @@ class Game{
 
 
 
-    fun 
-
-
-
-
 
 
     fun NewDay(){
