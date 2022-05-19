@@ -7,8 +7,16 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.DialogFragment
+import androidx.lifecycle.lifecycleScope
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import edu.icesi.monage.databinding.FragmentHomeBinding
 import edu.icesi.monage.databinding.FragmentPaymentsBinding
+import edu.icesi.monage.model.User
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 
 class PaymentsFragment : Fragment() {
     private var _binding: FragmentPaymentsBinding? = null
@@ -55,6 +63,23 @@ class PaymentsFragment : Fragment() {
             DialogInterface.OnClickListener { dialog, whichButton -> })
         val b = dialogBuilder.create()
         b.show()
+        lifecycleScope.launch(Dispatchers.IO) {
+            val user = Firebase.firestore
+                .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
+                .toObject(User::class.java)!!
+            if(user.energy>3 && user.money > 300){
+                user.energy -=3
+                user.money -=300
+                user.funny -=20
+                user.food +=30
+                binding.progressFoodP.setProgress(user.food)
+                binding.progressFunP.setProgress(user.funny)
+                binding.progressHygieneP.setProgress(user.hygiene)
+                Firebase.firestore
+                    .collection("users").document(Firebase.auth.currentUser!!.uid).set(user)
+            }
+
+        }
     }
 
     fun showDialogJob(){
@@ -75,6 +100,23 @@ class PaymentsFragment : Fragment() {
             DialogInterface.OnClickListener { dialog, whichButton -> })
         val b = dialogBuilder.create()
         b.show()
+        lifecycleScope.launch(Dispatchers.IO) {
+            val user = Firebase.firestore
+                .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
+                .toObject(User::class.java)!!
+            if (user.energy > 4) {
+                user.energy -= 4
+                user.money += 700
+                user.funny -= 30
+                user.food -= 30
+                user.hygiene -= 30
+                binding.progressFoodP.setProgress(user.food)
+                binding.progressFunP.setProgress(user.funny)
+                binding.progressHygieneP.setProgress(user.hygiene)
+                Firebase.firestore
+                    .collection("users").document(Firebase.auth.currentUser!!.uid).set(user)
+            }
+        }
     }
 
     fun showDialogPark(){
@@ -96,6 +138,24 @@ class PaymentsFragment : Fragment() {
             DialogInterface.OnClickListener { dialog, whichButton -> })
         val b = dialogBuilder.create()
         b.show()
+        lifecycleScope.launch(Dispatchers.IO) {
+            val user = Firebase.firestore
+                .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
+                .toObject(User::class.java)!!
+            if(user.energy>3 && user.money > 200){
+                user.energy -=3
+                user.money -=200
+                user.funny +=30
+                user.food +=50
+                user.hygiene -=20
+                binding.progressFoodP.setProgress(user.food)
+                binding.progressFunP.setProgress(user.funny)
+                binding.progressHygieneP.setProgress(user.hygiene)
+                Firebase.firestore
+                    .collection("users").document(Firebase.auth.currentUser!!.uid).set(user)
+
+            }
+             }
     }
 
     fun showDialogSpa(){
@@ -117,7 +177,24 @@ class PaymentsFragment : Fragment() {
             DialogInterface.OnClickListener { dialog, whichButton -> })
         val b = dialogBuilder.create()
         b.show()
+        lifecycleScope.launch(Dispatchers.IO) {
+            val user = Firebase.firestore
+                .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
+                .toObject(User::class.java)!!
+            if(user.money > 1000){
+                user.energy +=2
+                user.money -=1000
+                user.funny +=15
+                user.food +=10
+                user.hygiene +=30
+                binding.progressFoodP.setProgress(user.food)
+                binding.progressFunP.setProgress(user.funny)
+                binding.progressHygieneP.setProgress(user.hygiene)
+                Firebase.firestore
+                    .collection("users").document(Firebase.auth.currentUser!!.uid).set(user)
 
+            }
+           }
     }
 
 
