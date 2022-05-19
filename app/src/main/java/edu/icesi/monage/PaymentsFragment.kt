@@ -97,8 +97,8 @@ class PaymentsFragment : Fragment() {
         val options= arrayOf("Campaña de marketing", "Contabilidad", "Programación")
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
-        //dialogBuilder.setTitle("Supermercado")
-        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
+        dialogBuilder.setTitle("Trabajo")
+        //dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
             if(isChecked){
@@ -113,6 +113,8 @@ class PaymentsFragment : Fragment() {
             for (j in selectedList.indices) {
                 selectedStrings.add(options[selectedList[j]])
             }
+
+            Toast.makeText(context, "Items selected are: " + Arrays.toString(selectedStrings.toTypedArray()), Toast.LENGTH_SHORT).show()
         }
 
         dialogBuilder.show()
