@@ -60,7 +60,14 @@ class UserGameState( var user: User) {
 
         var result : Int = (higiene*cleanWeight).toInt()
         if(result<funFloor){
-            user.money -= random(100,500)
+            var toSustract = random(100,500)
+            if(user.money-toSustract <= 0){
+                user.money = 0
+
+            }else{
+                user.money -= toSustract
+            }
+
         }
         return result;
 
@@ -70,7 +77,7 @@ class UserGameState( var user: User) {
         if (starvingDays ==1) {
             starvingDays = 0
         }else {
-            starvingDays = starvingDays - random(1, starvingDays)
+            starvingDays = starvingDays - 1
         }
         
     }
