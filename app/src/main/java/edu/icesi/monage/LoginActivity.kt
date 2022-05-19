@@ -19,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
 
         //Entra a la pantalla principal
         binding.loginBtn.setOnClickListener {
+            if(binding.emailET.text.toString() != "" && binding.passwordET.text.toString() != ""){
                 Firebase.auth.signInWithEmailAndPassword(
                     binding.emailET.text.toString(),
                     binding.passwordET.text.toString()
@@ -28,6 +29,10 @@ class LoginActivity : AppCompatActivity() {
                 }.addOnFailureListener{
                     Toast.makeText(this,it.message, Toast.LENGTH_LONG).show()
                 }
+            }else{
+                Toast.makeText(this,"Existen campos vacios", Toast.LENGTH_LONG).show()
+            }
+
         }
 
         //Entra a la pantalla de registro
