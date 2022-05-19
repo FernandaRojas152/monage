@@ -35,13 +35,13 @@
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/menu/menuapp.xml" value="0.264" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.117" />
-        <entry key="..\:/monage/app/src/main/res/layout/activity_login.xml" value="0.11231884057971014" />
+        <entry key="..\:/monage/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/monage/app/src/main/res/layout/activity_navigation.xml" value="0.22" />
-        <entry key="..\:/monage/app/src/main/res/layout/activity_registration.xml" value="0.1" />
+        <entry key="..\:/monage/app/src/main/res/layout/activity_registration.xml" value="0.18" />
         <entry key="..\:/monage/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/monage/app/src/main/res/layout/fragment_community.xml" value="0.33" />
         <entry key="..\:/monage/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/monage/app/src/main/res/layout/fragment_payments.xml" value="0.17592592592592593" />
+        <entry key="..\:/monage/app/src/main/res/layout/fragment_payments.xml" value="0.22" />
       </map>
     </option>
   </component>
