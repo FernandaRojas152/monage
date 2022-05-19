@@ -5,6 +5,7 @@ import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.lifecycleScope
@@ -17,6 +18,8 @@ import edu.icesi.monage.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import java.util.*
+import kotlin.collections.ArrayList
 
 class PaymentsFragment : Fragment() {
     private var _binding: FragmentPaymentsBinding? = null
@@ -104,10 +107,16 @@ class PaymentsFragment : Fragment() {
                 selectedList.remove(Integer.valueOf(which))
             }
         }
-        //dialogBuilder.setPositiveButton("Done",
-         //   DialogInterface.OnClickListener { dialog, whichButton -> })
-        val b = dialogBuilder.create()
-        b.show()
+        dialogBuilder.setPositiveButton("DONE") { dialogInterface, i ->
+            val selectedStrings = ArrayList<String>()
+
+            for (j in selectedList.indices) {
+                selectedStrings.add(options[selectedList[j]])
+            }
+        }
+
+        dialogBuilder.show()
+
         lifecycleScope.launch(Dispatchers.IO) {
             val user = Firebase.firestore
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
