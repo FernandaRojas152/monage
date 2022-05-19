@@ -11,7 +11,6 @@ import edu.icesi.monage.databinding.FragmentHomeBinding
 import edu.icesi.monage.databinding.FragmentPaymentsBinding
 
 class PaymentsFragment : Fragment() {
-
     private var _binding: FragmentPaymentsBinding? = null
     private val binding get() = _binding!!
 
@@ -39,8 +38,19 @@ class PaymentsFragment : Fragment() {
 
     fun showDialogMarket(){
         //comprar frutas, comprar verduras, comprar carne
+        val options= arrayOf("Comprar frutas", "Comprar verduras", "Comprar carne")
+        val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
-        dialogBuilder.setMessage("The message here")
+        dialogBuilder.setTitle("Supermercado")
+        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
+        dialogBuilder.setMultiChoiceItems(options, null){
+            dialog, which, isChecked ->
+            if(isChecked){
+                selectedList.add(which)
+            }else if(selectedList.contains(which)){
+                selectedList.remove(Integer.valueOf(which))
+            }
+        }
         dialogBuilder.setPositiveButton("Done",
             DialogInterface.OnClickListener { dialog, whichButton -> })
         val b = dialogBuilder.create()
@@ -48,8 +58,19 @@ class PaymentsFragment : Fragment() {
     }
 
     fun showDialogJob(){
+        val options= arrayOf("Campaña de marketing", "Contabilidad", "Programación")
+        val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
-        dialogBuilder.setMessage("The message here")
+        dialogBuilder.setTitle("Supermercado")
+        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
+        dialogBuilder.setMultiChoiceItems(options, null){
+                dialog, which, isChecked ->
+            if(isChecked){
+                selectedList.add(which)
+            }else if(selectedList.contains(which)){
+                selectedList.remove(Integer.valueOf(which))
+            }
+        }
         dialogBuilder.setPositiveButton("Done",
             DialogInterface.OnClickListener { dialog, whichButton -> })
         val b = dialogBuilder.create()
@@ -58,8 +79,19 @@ class PaymentsFragment : Fragment() {
 
     fun showDialogPark(){
         //montarse a la noria, montar montaña rusa, montar carros chocones, comprar comida
+        val options= arrayOf("montarse a la noria", "montar montaña rusa", "montar carros chocones", "comprar comida")
+        val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
-        dialogBuilder.setMessage("The message here")
+        dialogBuilder.setTitle("Parque de diversiones")
+        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el parque: ")
+        dialogBuilder.setMultiChoiceItems(options, null){
+                dialog, which, isChecked ->
+            if(isChecked){
+                selectedList.add(which)
+            }else if(selectedList.contains(which)){
+                selectedList.remove(Integer.valueOf(which))
+            }
+        }
         dialogBuilder.setPositiveButton("Done",
             DialogInterface.OnClickListener { dialog, whichButton -> })
         val b = dialogBuilder.create()
@@ -68,8 +100,19 @@ class PaymentsFragment : Fragment() {
 
     fun showDialogSpa(){
         //dormir, descansar, masaje
+        val options= arrayOf("dormir", "descansar", "masaje")
+        val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
-        dialogBuilder.setMessage("The message here")
+        dialogBuilder.setTitle("Spa")
+        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el spa: ")
+        dialogBuilder.setMultiChoiceItems(options, null){
+                dialog, which, isChecked ->
+            if(isChecked){
+                selectedList.add(which)
+            }else if(selectedList.contains(which)){
+                selectedList.remove(Integer.valueOf(which))
+            }
+        }
         dialogBuilder.setPositiveButton("Done",
             DialogInterface.OnClickListener { dialog, whichButton -> })
         val b = dialogBuilder.create()
