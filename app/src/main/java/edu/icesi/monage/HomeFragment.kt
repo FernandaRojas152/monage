@@ -43,8 +43,9 @@ class HomeFragment : Fragment() {
 
 
             withContext(Dispatchers.Main) {
-                binding.username.text = user.name
-
+                binding.username.text = user.username
+                binding.energyTx.text = "${user.energy}/10"
+                binding.moneyTx.text = "$${user.money}"
                 when(user.state){
                     "FANTASTIC"->{
                         binding.imageState.setImageResource(R.drawable.fantastico)
