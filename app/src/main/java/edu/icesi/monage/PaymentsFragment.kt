@@ -25,7 +25,13 @@ class PaymentsFragment : Fragment() {
             showDialogMarket()
         }
         binding.job.setOnClickListener {
-
+            showDialogJob()
+        }
+        binding.spa.setOnClickListener {
+            showDialogSpa()
+        }
+        binding.park.setOnClickListener {
+            showDialogPark()
         }
 
         return binding.root
@@ -70,6 +76,7 @@ class PaymentsFragment : Fragment() {
         b.show()
 
     }
+
 
     companion object {
         @JvmStatic
