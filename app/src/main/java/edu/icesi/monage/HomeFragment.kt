@@ -10,7 +10,9 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import edu.icesi.monage.databinding.FragmentHomeBinding
+import edu.icesi.monage.model.State
 import edu.icesi.monage.model.User
+import edu.icesi.monage.model.UserGameState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
@@ -28,20 +30,50 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater,container,false)
+        startGame()
+        return binding.root
+    }
 
-        binding.progressFood.setProgress(calculateProgress(true,false,false),true)
-        binding.foodTxt.text = "${binding.progressFood.progress.toString()}${"%"}"
-        binding.progressHygiene.setProgress(calculateProgress(false,true,false),true)
-        binding.hygieneTxt.text = "${binding.progressHygiene.progress.toString()}${"%"}"
-        binding.progressFun.setProgress(calculateProgress(false,false,true),true)
-        binding.funTxt.text = "${binding.progressFun.progress.toString()}${"%"}"
-
+    private fun calculateProgress(food:Boolean,hygiene: Boolean, funn: Boolean){
+        var progress = 0
         lifecycleScope.launch(Dispatchers.IO) {
             val user = Firebase.firestore
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
                 .toObject(User::class.java)!!
+            if (food) {
+                //metodo del usuario para calcular
+                progress = user.food
+                withContext(Dispatchers.Main) {
+                    binding.progressFood.setProgress(progress)
+                    binding.foodTxt.text = "${binding.progressFood.progress.toString()}${"%"}"
+                }
+            } else if (hygiene) {
+                //metodo del usuario para calcular
+                progress = user.hygiene
+                withContext(Dispatchers.Main) {
+                    binding.progressHygiene.setProgress(progress)
+                    binding.hygieneTxt.text = "${binding.progressHygiene.progress.toString()}${"%"}"
+                }
+            } else {
+                //metodo del usuario para calcular
+                progress = user.funny
+                withContext(Dispatchers.Main) {
+                    binding.progressFun.setProgress(progress)
+                    binding.funTxt.text = "${binding.progressFun.progress.toString()}${"%"}"
+                }
+            }
+        }
+    }
 
-
+    private fun startGame(){
+        lifecycleScope.launch(Dispatchers.IO) {
+            val user = Firebase.firestore
+                .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
+                .toObject(User::class.java)!!
+            val userState = UserGameState(user)
+            val average = userState.totalCalculation()
+            val state = State.calculateState(average)
+            user.state = state
             withContext(Dispatchers.Main) {
                 binding.username.text = user.username
                 binding.energyTx.text = "${user.energy}/10"
@@ -65,25 +97,12 @@ class HomeFragment : Fragment() {
                     }
                 }
             }
+            Firebase.firestore
+                .collection("users").document(Firebase.auth.currentUser!!.uid).set(user)
+            calculateProgress(true,false,false)
+            calculateProgress(false,true,false)
+            calculateProgress(false,false,true)
         }
-
-
-            return binding.root
-    }
-
-    private fun calculateProgress(food:Boolean,hygiene: Boolean, funn: Boolean): Int{
-        var progress = 0
-        if (food){
-           //metodo del usuario para calcular
-            progress = 60
-        }else if (hygiene){
-            //metodo del usuario para calcular
-            progress = 100
-        }else{
-            //metodo del usuario para calcular
-            progress = 10
-        }
-        return progress
     }
 
     companion object {

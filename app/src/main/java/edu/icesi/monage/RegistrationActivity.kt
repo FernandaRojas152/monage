@@ -64,7 +64,7 @@ class RegistrationActivity : AppCompatActivity() {
                 60,
                 60,
             )
-            user.state = State.calculateState(user.food,user.hygiene,user.hygiene)
+            user.state = "NEUTRAL"
             Firebase.firestore.collection("users").document(it).set(user).addOnSuccessListener {
                 startActivity(Intent(this, LoginActivity::class.java))
             }

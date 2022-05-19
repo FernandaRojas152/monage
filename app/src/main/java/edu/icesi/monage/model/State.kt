@@ -7,18 +7,17 @@ object State {
     const val SAD = "SAD"
     const val DY = "DYING"
 
-    fun calculateState(food:Int,hygiene:Int,funny:Int):String{
-        var calculate = (food+hygiene+funny)/3
+    fun calculateState(total:Int):String{
         var state = ""
-        if (90 <= calculate && calculate<= 100){
+        if (90 <= total && total<= 100){
             state = FAN
-        }else if(60 <= calculate && calculate<= 89){
+        }else if(60 <= total && total<= 89){
             state = HAP
-        }else if(40 <= calculate && calculate<= 59){
+        }else if(40 <= total && total<= 59){
             state = NEU
-        }else if(20 <= calculate && calculate<= 39){
+        }else if(20 <= total && total<= 39){
             state = SAD
-        }else if (0 <= calculate && calculate<= 19){
+        }else if (0 <= total && total<= 19){
             state = DY
         }
         return state
