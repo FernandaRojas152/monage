@@ -70,8 +70,16 @@ class PaymentsFragment : Fragment() {
             if(user.energy>3 && user.money > 300){
                 user.energy -=3
                 user.money -=300
-                user.funny -=20
-                user.food +=30
+                if(user.funny<20){
+                    user.funny = 0
+                }else{
+                    user.funny -=20
+                }
+                if(user.food>70){
+                  user.food = 100
+                }else{
+                    user.food +=30
+                }
                 binding.progressFoodP.setProgress(user.food)
                 binding.progressFunP.setProgress(user.funny)
                 binding.progressHygieneP.setProgress(user.hygiene)
@@ -107,9 +115,21 @@ class PaymentsFragment : Fragment() {
             if (user.energy > 4) {
                 user.energy -= 4
                 user.money += 700
-                user.funny -= 30
-                user.food -= 30
-                user.hygiene -= 30
+                if(user.funny<30){
+                    user.funny = 0
+                }else{
+                    user.funny -= 30
+                }
+                if(user.food<30){
+                    user.food=0
+                }else{
+                    user.food -= 30
+                }
+                if(user.hygiene<30){
+                    user.hygiene = 0
+                }else{
+                    user.hygiene -= 30
+                }
                 binding.progressFoodP.setProgress(user.food)
                 binding.progressFunP.setProgress(user.funny)
                 binding.progressHygieneP.setProgress(user.hygiene)
@@ -145,9 +165,21 @@ class PaymentsFragment : Fragment() {
             if(user.energy>3 && user.money > 200){
                 user.energy -=3
                 user.money -=200
-                user.funny +=30
-                user.food +=50
-                user.hygiene -=20
+                if(user.funny>70){
+                    user.funny = 100
+                }else{
+                    user.funny +=30
+                }
+                if(user.food>50){
+                    user.food = 100
+                }else{
+                    user.food +=50
+                }
+                if(user.hygiene<20){
+                    user.hygiene=0
+                }else{
+                    user.hygiene -=20
+                }
                 binding.progressFoodP.setProgress(user.food)
                 binding.progressFunP.setProgress(user.funny)
                 binding.progressHygieneP.setProgress(user.hygiene)
@@ -182,11 +214,27 @@ class PaymentsFragment : Fragment() {
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
                 .toObject(User::class.java)!!
             if(user.money > 1000){
-                user.energy +=2
+                if(user.energy>8){
+                    user.energy = 10
+                }else{
+                    user.energy +=2
+                }
                 user.money -=1000
-                user.funny +=15
-                user.food +=10
-                user.hygiene +=30
+                if(user.funny>85){
+                    user.funny=100
+                }else{
+                    user.funny +=15
+                }
+                if(user.food>90){
+                    user.food = 100
+                }else{
+                    user.food +=10
+                }
+                if(user.hygiene>70){
+                    user.hygiene = 100
+                }else{
+                    user.hygiene +=30
+                }
                 binding.progressFoodP.setProgress(user.food)
                 binding.progressFunP.setProgress(user.funny)
                 binding.progressHygieneP.setProgress(user.hygiene)
