@@ -8,7 +8,7 @@
         <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/drawable/selector.xml" value="0.1945" />
         <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/activity_navigation.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/fragment_payments.xml" value="0.2965250965250965" />
+        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/fragment_payments.xml" value="0.460431654676259" />
         <entry key="..\:/Users/Jose Luis/AndroidStudioProjects/monage/app/src/main/res/layout/activity_navigation.xml" value="0.12" />
         <entry key="..\:/Users/Jose Luis/AndroidStudioProjects/monage/app/src/main/res/layout/fragment_home.xml" value="0.2747603833865815" />
         <entry key="..\:/Users/Jose Luis/AndroidStudioProjects/monage/app/src/main/res/layout/fragment_payments.xml" value="0.22" />
@@ -45,7 +45,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
