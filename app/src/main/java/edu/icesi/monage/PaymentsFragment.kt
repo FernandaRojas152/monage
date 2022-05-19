@@ -86,7 +86,7 @@ class PaymentsFragment : Fragment() {
         val options= arrayOf("Campaña de marketing", "Contabilidad", "Programación")
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
-        dialogBuilder.setTitle("Supermercado")
+        //dialogBuilder.setTitle("Supermercado")
         dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
@@ -96,8 +96,8 @@ class PaymentsFragment : Fragment() {
                 selectedList.remove(Integer.valueOf(which))
             }
         }
-        dialogBuilder.setPositiveButton("Done",
-            DialogInterface.OnClickListener { dialog, whichButton -> })
+        //dialogBuilder.setPositiveButton("Done",
+         //   DialogInterface.OnClickListener { dialog, whichButton -> })
         val b = dialogBuilder.create()
         b.show()
         lifecycleScope.launch(Dispatchers.IO) {

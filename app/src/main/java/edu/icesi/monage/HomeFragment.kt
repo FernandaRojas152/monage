@@ -1,5 +1,6 @@
 package edu.icesi.monage
 
+import android.graphics.Color.blue
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -81,6 +82,7 @@ class HomeFragment : Fragment() {
                 when(user.state){
                     "FANTASTIC"->{
                         binding.imageState.setImageResource(R.drawable.fantastico)
+                        //binding.imagebackground.setColorFilter(resources.getColor(R.color.blue))
                     }
                     "HAPPY"->{
                         binding.imageState.setImageResource(R.drawable.felicidad)
