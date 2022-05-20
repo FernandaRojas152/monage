@@ -84,7 +84,7 @@ class PaymentsFragment : Fragment() {
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
         dialogBuilder.setTitle("Supermercado")
-        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
+        //dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
             if(isChecked){
@@ -136,7 +136,7 @@ class PaymentsFragment : Fragment() {
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
         dialogBuilder.setTitle("Trabajo")
-        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el trabajo: ")
+        //dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el trabajo: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
             if(isChecked){
@@ -194,7 +194,7 @@ class PaymentsFragment : Fragment() {
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
         dialogBuilder.setTitle("Parque de diversiones")
-        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el parque de diversiones: ")
+        //dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el parque de diversiones: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
             if(isChecked){
@@ -252,7 +252,7 @@ class PaymentsFragment : Fragment() {
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
         dialogBuilder.setTitle("Spa")
-        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el spa: ")
+        //dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el spa: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
             if(isChecked){
