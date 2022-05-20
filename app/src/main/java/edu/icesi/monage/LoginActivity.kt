@@ -19,10 +19,10 @@ class LoginActivity : AppCompatActivity() {
 
         //Entra a la pantalla principal
         binding.loginBtn.setOnClickListener {
-            if(binding.emailET.text.toString() != "" && binding.passwordET.text.toString() != ""){
+            if(binding.emailET.text.toString() != "" && binding.passwordET.editText!!.text.toString() != ""){
                 Firebase.auth.signInWithEmailAndPassword(
                     binding.emailET.text.toString(),
-                    binding.passwordET.text.toString()
+                    binding.passwordET.editText!!.text.toString()
                 ).addOnSuccessListener {
                     startActivity(Intent(this,NavigationActivity::class.java))
                     finish()

@@ -25,9 +25,9 @@ class RegistrationActivity : AppCompatActivity() {
         //Crea cuenta y va a la pantalla de registro
         binding.createBtn.setOnClickListener {
             val email = binding.correoET.text.toString()
-            val pass = binding.passwordET.text.toString()
+            val pass = binding.passwordET.editText!!.text.toString()
             Log.e("<<<<<", binding.correoET.text.toString())
-            if (binding.nameET.text.toString() != "" && binding.correoET.text.toString() != "" && binding.passwordET.text.toString() != "" && binding.usernameET.toString() != ""){
+            if (binding.nameET.text.toString() != "" && binding.correoET.text.toString() != "" && binding.passwordET.editText!!.text.toString() != "" && binding.usernameET.toString() != ""){
                 Firebase.auth.createUserWithEmailAndPassword(email, pass).addOnSuccessListener {
                     Toast.makeText(this, "Cuenta creada exitosamente", Toast.LENGTH_LONG).show()
                     registerUserData()
