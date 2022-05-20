@@ -14,10 +14,13 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import edu.icesi.monage.databinding.FragmentHomeBinding
 import edu.icesi.monage.databinding.FragmentPaymentsBinding
+import edu.icesi.monage.model.State
 import edu.icesi.monage.model.User
+import edu.icesi.monage.model.UserGameState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -31,6 +34,34 @@ class PaymentsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentPaymentsBinding.inflate(inflater,container,false)
+
+
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            val user = Firebase.firestore
+                .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
+                .toObject(User::class.java)!!
+            val userState = UserGameState(user)
+            val average = userState.totalCalculation()
+            val state = State.calculateState(average)
+            user.state = state
+            withContext(Dispatchers.Main) {
+
+                binding.energeyT.text = "${user.energy}/10"
+                binding.moneyT.text = "$${user.money}"
+                val food = user.food
+                binding.progressFoodP.setProgress(food)
+
+                val hygiene = user.hygiene
+                binding.progressHygieneP.setProgress(hygiene)
+
+                val funn = user.funny
+                binding.progressFunP.setProgress(funn)
+
+            }
+        }
+
+
         binding.market.setOnClickListener {
             showDialogMarket()
         }

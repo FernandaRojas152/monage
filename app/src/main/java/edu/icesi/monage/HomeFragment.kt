@@ -79,6 +79,15 @@ class HomeFragment : Fragment() {
                 binding.username.text = user.username
                 binding.energyTx.text = "${user.energy}/10"
                 binding.moneyTx.text = "$${user.money}"
+                val food = user.food
+                binding.progressFood.setProgress(food)
+                binding.foodTxt.text = "${binding.progressFood.progress.toString()}${"%"}"
+                val hygiene = user.hygiene
+                binding.progressHygiene.setProgress(hygiene)
+                binding.hygieneTxt.text = "${binding.progressHygiene.progress.toString()}${"%"}"
+                val funn = user.funny
+                binding.progressFun.setProgress(funn)
+                binding.funTxt.text = "${binding.progressFun.progress.toString()}${"%"}"
                 when(user.state){
                     "FANTASTIC"->{
                         binding.imageState.setImageResource(R.drawable.fantastico)
