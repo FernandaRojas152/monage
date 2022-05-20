@@ -7,7 +7,7 @@
     android:background="@color/white">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/energeyT"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -32,7 +32,7 @@
         app:srcCompat="@drawable/lightning" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/moneyT"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -55,9 +55,9 @@
         android:layout_height="35dp"
         android:layout_marginStart="24dp"
         android:src="@drawable/coin"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
+        app:layout_constraintBottom_toBottomOf="@+id/energeyT"
+        app:layout_constraintStart_toEndOf="@+id/energeyT"
+        app:layout_constraintTop_toTopOf="@+id/energeyT" />
 
     <ProgressBar
         android:id="@+id/progressHygieneP"
@@ -68,7 +68,7 @@
         android:layout_marginTop="16dp"
         android:progressDrawable="@drawable/pb_hygiene"
         app:layout_constraintStart_toEndOf="@+id/imageView23"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/moneyT" />
 
     <ProgressBar
         android:id="@+id/progressFoodP"
@@ -79,7 +79,7 @@
         android:layout_marginTop="16dp"
         android:progressDrawable="@drawable/pb_food"
         app:layout_constraintStart_toEndOf="@+id/imageView20"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/energeyT" />
 
     <ImageView
         android:id="@+id/imageView23"
@@ -103,7 +103,7 @@
         android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toTopOf="@+id/constrainMap"
         app:layout_constraintStart_toEndOf="@+id/progressHygieneP"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/moneyT"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/fun" />
 
@@ -132,7 +132,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toEndOf="@+id/imageView24"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/moneyT" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constrainMap"
