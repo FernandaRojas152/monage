@@ -136,7 +136,7 @@ class PaymentsFragment : Fragment() {
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
         dialogBuilder.setTitle("Trabajo")
-        //dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
+        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el trabajo: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
             if(isChecked){
@@ -193,8 +193,8 @@ class PaymentsFragment : Fragment() {
         val options= arrayOf("Montarse a la noria", "Montar montaña rusa", "Montar carros chocones", "Comprar comida")
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
-        dialogBuilder.setTitle("Trabajo")
-        //dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
+        dialogBuilder.setTitle("Parque de diversiones")
+        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el parque de diversiones: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
             if(isChecked){
@@ -251,8 +251,8 @@ class PaymentsFragment : Fragment() {
         val options= arrayOf("Dormir", "Descansar", "Masaje")
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
-        dialogBuilder.setTitle("Trabajo")
-        //dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
+        dialogBuilder.setTitle("Spa")
+        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el spa: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
             if(isChecked){
