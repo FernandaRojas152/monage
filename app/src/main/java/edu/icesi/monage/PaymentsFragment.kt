@@ -55,17 +55,24 @@ class PaymentsFragment : Fragment() {
         dialogBuilder.setTitle("Supermercado")
         dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
         dialogBuilder.setMultiChoiceItems(options, null){
-            dialog, which, isChecked ->
+                dialog, which, isChecked ->
             if(isChecked){
                 selectedList.add(which)
             }else if(selectedList.contains(which)){
                 selectedList.remove(Integer.valueOf(which))
             }
         }
-        dialogBuilder.setPositiveButton("Done",
-            DialogInterface.OnClickListener { dialog, whichButton -> })
-        val b = dialogBuilder.create()
-        b.show()
+        dialogBuilder.setPositiveButton("DONE") { dialogInterface, i ->
+            val selectedStrings = ArrayList<String>()
+
+            for (j in selectedList.indices) {
+                selectedStrings.add(options[selectedList[j]])
+            }
+
+            Toast.makeText(context, "Items selected are: " + Arrays.toString(selectedStrings.toTypedArray()), Toast.LENGTH_SHORT).show()
+        }
+
+        dialogBuilder.show()
         lifecycleScope.launch(Dispatchers.IO) {
             val user = Firebase.firestore
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
@@ -152,11 +159,11 @@ class PaymentsFragment : Fragment() {
 
     fun showDialogPark(){
         //montarse a la noria, montar montaña rusa, montar carros chocones, comprar comida
-        val options= arrayOf("montarse a la noria", "montar montaña rusa", "montar carros chocones", "comprar comida")
+        val options= arrayOf("Montarse a la noria", "Montar montaña rusa", "Montar carros chocones", "Comprar comida")
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
-        dialogBuilder.setTitle("Parque de diversiones")
-        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el parque: ")
+        dialogBuilder.setTitle("Trabajo")
+        //dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
             if(isChecked){
@@ -165,10 +172,17 @@ class PaymentsFragment : Fragment() {
                 selectedList.remove(Integer.valueOf(which))
             }
         }
-        dialogBuilder.setPositiveButton("Done",
-            DialogInterface.OnClickListener { dialog, whichButton -> })
-        val b = dialogBuilder.create()
-        b.show()
+        dialogBuilder.setPositiveButton("DONE") { dialogInterface, i ->
+            val selectedStrings = ArrayList<String>()
+
+            for (j in selectedList.indices) {
+                selectedStrings.add(options[selectedList[j]])
+            }
+
+            Toast.makeText(context, "Items selected are: " + Arrays.toString(selectedStrings.toTypedArray()), Toast.LENGTH_SHORT).show()
+        }
+
+        dialogBuilder.show()
         lifecycleScope.launch(Dispatchers.IO) {
             val user = Firebase.firestore
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
@@ -203,11 +217,11 @@ class PaymentsFragment : Fragment() {
 
     fun showDialogSpa(){
         //dormir, descansar, masaje
-        val options= arrayOf("dormir", "descansar", "masaje")
+        val options= arrayOf("Dormir", "Descansar", "Masaje")
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
-        dialogBuilder.setTitle("Spa")
-        dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el spa: ")
+        dialogBuilder.setTitle("Trabajo")
+        //dialogBuilder.setMessage("Selecciona que actividad deseas realizar en el supermercado: ")
         dialogBuilder.setMultiChoiceItems(options, null){
                 dialog, which, isChecked ->
             if(isChecked){
@@ -216,10 +230,17 @@ class PaymentsFragment : Fragment() {
                 selectedList.remove(Integer.valueOf(which))
             }
         }
-        dialogBuilder.setPositiveButton("Done",
-            DialogInterface.OnClickListener { dialog, whichButton -> })
-        val b = dialogBuilder.create()
-        b.show()
+        dialogBuilder.setPositiveButton("DONE") { dialogInterface, i ->
+            val selectedStrings = ArrayList<String>()
+
+            for (j in selectedList.indices) {
+                selectedStrings.add(options[selectedList[j]])
+            }
+
+            Toast.makeText(context, "Items selected are: " + Arrays.toString(selectedStrings.toTypedArray()), Toast.LENGTH_SHORT).show()
+        }
+
+        dialogBuilder.show()
         lifecycleScope.launch(Dispatchers.IO) {
             val user = Firebase.firestore
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
