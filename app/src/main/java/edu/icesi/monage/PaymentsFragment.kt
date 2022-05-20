@@ -35,8 +35,6 @@ class PaymentsFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentPaymentsBinding.inflate(inflater,container,false)
 
-
-
         lifecycleScope.launch(Dispatchers.IO) {
             val user = Firebase.firestore
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()

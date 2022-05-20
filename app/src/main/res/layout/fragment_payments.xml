@@ -8,9 +8,10 @@
 
     <TextView
         android:id="@+id/energeyT"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/backtxt"
         android:padding="5dp"
         android:text="TextView"
@@ -20,6 +21,9 @@
         android:textIsSelectable="false"
         android:textStyle="bold"
         app:autoSizeTextType="none"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
@@ -29,6 +33,8 @@
         android:layout_height="35dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/energeyT"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/lightning" />
@@ -36,8 +42,8 @@
     <TextView
         android:id="@+id/moneyT"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/backtxt"
         android:elegantTextHeight="true"
@@ -48,107 +54,112 @@
         app:autoSizeTextType="none"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/imageView8"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/imageView8" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="24dp"
         android:src="@drawable/coin"
         app:layout_constraintBottom_toBottomOf="@+id/energeyT"
+        app:layout_constraintEnd_toStartOf="@+id/moneyT"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/energeyT"
         app:layout_constraintTop_toTopOf="@+id/energeyT" />
 
     <ProgressBar
         android:id="@+id/progressHygieneP"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="93dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="8dp"
         android:progressDrawable="@drawable/pb_hygiene"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
+        app:layout_constraintEnd_toStartOf="@+id/imageView24"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView23"
-        app:layout_constraintTop_toBottomOf="@+id/moneyT" />
+        app:layout_constraintTop_toTopOf="@+id/imageView23" />
 
     <ProgressBar
         android:id="@+id/progressFoodP"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="93dp"
-        android:layout_height="19dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:progressDrawable="@drawable/pb_food"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+        app:layout_constraintEnd_toStartOf="@+id/imageView23"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView20"
-        app:layout_constraintTop_toBottomOf="@+id/energeyT" />
+        app:layout_constraintTop_toTopOf="@+id/imageView20" />
 
     <ImageView
         android:id="@+id/imageView23"
-        android:layout_width="23dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="6dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/constrainMap"
+        app:layout_constraintBottom_toBottomOf="@+id/progressFoodP"
+        app:layout_constraintEnd_toStartOf="@+id/progressHygieneP"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/progressFoodP"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/progressFoodP"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/hygiene" />
 
     <ImageView
         android:id="@+id/imageView24"
-        android:layout_width="23dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="6dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/constrainMap"
+        app:layout_constraintBottom_toBottomOf="@+id/progressHygieneP"
+        app:layout_constraintEnd_toStartOf="@+id/progressFunP"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/progressHygieneP"
-        app:layout_constraintTop_toBottomOf="@+id/moneyT"
+        app:layout_constraintTop_toTopOf="@+id/progressHygieneP"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/fun" />
 
     <ImageView
         android:id="@+id/imageView20"
-        android:layout_width="23dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/constrainMap"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/progressFoodP"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/energeyT"
         app:srcCompat="@drawable/food" />
 
     <ProgressBar
         android:id="@+id/progressFunP"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
-        android:layout_height="19dp"
+        android:layout_height="0dp"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="24dp"
         android:progressDrawable="@drawable/pb_fun"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView24"
-        app:layout_constraintTop_toBottomOf="@+id/moneyT" />
+        app:layout_constraintTop_toTopOf="@+id/imageView24" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constrainMap"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/map"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressHygieneP">
+        app:layout_constraintTop_toBottomOf="@+id/imageView20">
 
         <Button
             android:id="@+id/market"
