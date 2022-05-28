@@ -82,19 +82,26 @@ class HomeFragment : Fragment() {
                 when(user.state){
                     "FANTASTIC"->{
                         binding.imageState.setImageResource(R.drawable.fantastico)
-                        //binding.imagebackground.setColorFilter(resources.getColor(R.color.blue))
+                        binding.imagebackground.setImageResource(R.drawable.backstatefantastic)
                     }
                     "HAPPY"->{
                         binding.imageState.setImageResource(R.drawable.felicidad)
+                        binding.imagebackground.setImageResource(R.drawable.backstatefeliz)
                     }
                     "NEUTRAL"->{
                         binding.imageState.setImageResource(R.drawable.neutral)
+                        binding.imagebackground.setImageResource(R.drawable.backstateneutro)
+
                     }
                     "SAD"->{
                         binding.imageState.setImageResource(R.drawable.triste)
+                        binding.imagebackground.setImageResource(R.drawable.backstatetriste)
+
                     }
                     "DYING"->{
                         binding.imageState.setImageResource(R.drawable.dead)
+                        binding.imagebackground.setImageResource(R.drawable.backstatemoribundo)
+
 
                     }
                 }

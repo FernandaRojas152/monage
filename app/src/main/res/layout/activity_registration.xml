@@ -109,6 +109,7 @@
         android:id="@+id/singinTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="32dp"
         android:text="@string/sesion"
         android:textColor="@color/white"
@@ -159,6 +160,7 @@
             android:background="@drawable/backet"
             android:minHeight="64dp"
             android:padding="10dp"
+            android:password="true"
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 

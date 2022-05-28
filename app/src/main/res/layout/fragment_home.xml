@@ -179,7 +179,7 @@
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17"
-        app:srcCompat="@drawable/back_splash" />
+        app:srcCompat="@drawable/backet" />
 
     <ImageView
         android:id="@+id/imageState"
@@ -241,7 +241,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="210dp"
+        android:layout_width="190dp"
         android:layout_height="57dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
@@ -267,7 +267,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="3dp"
-            android:layout_marginEnd="90dp"
+            android:layout_marginEnd="64dp"
             android:text="Username"
             android:textAlignment="viewStart"
             android:textColor="@color/principal"
@@ -281,7 +281,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="90dp"
+            android:layout_marginEnd="82dp"
             android:layout_marginBottom="3dp"
             android:text="Puntaje"
             android:textColor="@color/principal"
