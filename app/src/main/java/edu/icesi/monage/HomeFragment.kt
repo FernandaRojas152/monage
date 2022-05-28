@@ -79,6 +79,7 @@ class HomeFragment : Fragment() {
                 binding.username.text = user.username
                 binding.energyTx.text = "${user.energy}/10"
                 binding.moneyTx.text = "$${user.money}"
+                binding.score.text = user.score.toString()
                 when(user.state){
                     "FANTASTIC"->{
                         binding.imageState.setImageResource(R.drawable.fantastico)
