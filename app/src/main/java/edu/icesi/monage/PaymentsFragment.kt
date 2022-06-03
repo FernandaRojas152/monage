@@ -77,8 +77,10 @@ class PaymentsFragment : Fragment() {
     }
 
     fun showDialogMarket(){
+        val dialogBuilder = AlertDialog.Builder(context)
+        dialogBuilder.setView(R.layout.dialog_market)
         //comprar frutas, comprar verduras, comprar carne
-        val options= arrayOf("Comprar frutas", "Comprar verduras", "Comprar carne")
+        /**val options= arrayOf("Comprar frutas", "Comprar verduras", "Comprar carne")
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
         dialogBuilder.setTitle("Supermercado")
@@ -100,6 +102,7 @@ class PaymentsFragment : Fragment() {
 
             Toast.makeText(context, "Items selected are: " + Arrays.toString(selectedStrings.toTypedArray()), Toast.LENGTH_SHORT).show()
         }
+        */
 
         dialogBuilder.show()
         lifecycleScope.launch(Dispatchers.IO) {

@@ -13,4 +13,6 @@
     <color name="food">#FF9E39</color>
     <color name="hygiene">#00E779</color>
     <color name="fun">#FF7B84</color>
+    <color name="background_dialog"> #f7f7f7</color>
+    <color name="text_dialog">#a3a3a3</color>
 </resources>
