@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="419dp"
+        android:layout_height="246dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/cloud"
+        app:layout_constraintBottom_toTopOf="@+id/constrainMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/energeyT"
@@ -13,9 +25,10 @@
         android:layout_marginStart="6dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/backtxt"
-        android:padding="5dp"
+        android:paddingStart="15dp"
+        android:paddingTop="8dp"
         android:text="TextView"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@color/principal"
         android:textIsSelectable="false"
@@ -32,7 +45,7 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="34dp"
         app:layout_constraintEnd_toStartOf="@+id/energeyT"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +60,8 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/backtxt"
         android:elegantTextHeight="true"
-        android:padding="5dp"
+        android:paddingStart="15dp"
+        android:paddingTop="8dp"
         android:text="TextView"
         android:textColor="@color/principal"
         android:textStyle="bold"
@@ -128,7 +142,7 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toStartOf="@+id/progressFoodP"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,66 +165,77 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constrainMap"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="409dp"
+        android:layout_height="545dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/map"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView28"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20">
+        app:layout_constraintTop_toBottomOf="@+id/imageView20"
+        app:layout_constraintVertical_bias="0.853">
 
         <Button
             android:id="@+id/market"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="322dp"
-            android:layout_marginTop="418dp"
+            android:layout_width="69dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="270dp"
             android:layout_marginEnd="7dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/supermarket"
             app:cornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/spa"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="261dp"
+            android:layout_marginTop="45dp"
             android:layout_marginEnd="68dp"
-            android:layout_marginBottom="54dp"
             android:background="@drawable/spa"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/market"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/park"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="65dp"
+            android:layout_height="71dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="64dp"
             android:layout_marginEnd="313dp"
-            android:background="@drawable/parquediversiones"
+            android:background="@drawable/park"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/job"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="323dp"
+            android:layout_width="64dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/job"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/park" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="517dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bush" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

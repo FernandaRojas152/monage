@@ -33,8 +33,8 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/backtxt"
         android:padding="5dp"
-        android:text="energia"
-        android:textAlignment="center"
+        android:text="Energía"
+        android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@color/principal"
         android:textIsSelectable="false"
@@ -55,6 +55,7 @@
         android:elegantTextHeight="true"
         android:padding="5dp"
         android:text="Dinero"
+        android:textAlignment="viewStart"
         android:textColor="@color/principal"
         android:textStyle="bold"
         app:autoSizeTextType="none"
@@ -170,21 +171,19 @@
 
     <ImageView
         android:id="@+id/imagebackground"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginEnd="131dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        android:layout_width="197dp"
+        android:layout_height="213dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/character"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <ImageView
         android:id="@+id/imageState"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="89dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="88dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17"
@@ -195,12 +194,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="@string/comida"
         android:textColor="@color/principal"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
-        app:layout_constraintTop_toBottomOf="@+id/imageState" />
+        app:layout_constraintTop_toBottomOf="@+id/imagebackground" />
 
     <TextView
         android:id="@+id/textView15"
@@ -283,6 +282,7 @@
             android:layout_marginEnd="82dp"
             android:layout_marginBottom="3dp"
             android:text="Puntaje"
+            android:textAlignment="viewStart"
             android:textColor="@color/principal"
             app:layout_constraintBottom_toBottomOf="@+id/imageView18"
             app:layout_constraintEnd_toEndOf="parent"
