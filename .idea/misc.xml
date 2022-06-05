@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_payments.xml" value="0.1" />
+        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_transactions.xml" value="0.1" />
+        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/inver_item.xml" value="0.264" />
         <entry key="app/src/main/res/drawable/back_splash.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/backbtn.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/backet.xml" value="0.1645" />
@@ -20,7 +24,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>

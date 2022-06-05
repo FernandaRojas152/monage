@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="419dp"
-        android:layout_height="246dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/cloud"
-        app:layout_constraintBottom_toTopOf="@+id/constrainMap"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <TextView
         android:id="@+id/energeyT"
         android:layout_width="0dp"
@@ -165,9 +153,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constrainMap"
-        android:layout_width="409dp"
-        android:layout_height="545dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="400dp"
+        android:layout_height="445dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/map"
         app:layout_constraintBottom_toTopOf="@+id/imageView28"
@@ -178,7 +165,7 @@
 
         <Button
             android:id="@+id/market"
-            android:layout_width="69dp"
+            android:layout_width="65dp"
             android:layout_height="65dp"
             android:layout_marginStart="270dp"
             android:layout_marginEnd="7dp"
@@ -192,8 +179,8 @@
 
         <Button
             android:id="@+id/spa"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="75dp"
+            android:layout_height="70dp"
             android:layout_marginStart="261dp"
             android:layout_marginTop="45dp"
             android:layout_marginEnd="68dp"
@@ -206,8 +193,8 @@
 
         <Button
             android:id="@+id/park"
-            android:layout_width="65dp"
-            android:layout_height="71dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="313dp"
             android:background="@drawable/park"
@@ -218,8 +205,8 @@
 
         <Button
             android:id="@+id/job"
-            android:layout_width="64dp"
-            android:layout_height="57dp"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/job"
             app:layout_constraintEnd_toEndOf="parent"

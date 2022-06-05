@@ -171,8 +171,8 @@
 
     <ImageView
         android:id="@+id/imagebackground"
-        android:layout_width="197dp"
-        android:layout_height="213dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/character"
         app:layout_constraintEnd_toEndOf="parent"
@@ -183,7 +183,7 @@
         android:id="@+id/imageState"
         android:layout_width="89dp"
         android:layout_height="98dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17"

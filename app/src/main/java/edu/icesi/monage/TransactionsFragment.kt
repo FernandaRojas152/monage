@@ -6,12 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import edu.icesi.monage.databinding.FragmentTransactionsBinding
+import edu.icesi.monage.model.InversionAdapter
 import edu.icesi.monage.model.Invertion
-import edu.icesi.monage.model.RvAdapter
 import edu.icesi.monage.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -23,8 +24,8 @@ class TransactionsFragment : Fragment() {
     private var _binding: FragmentTransactionsBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var rvAdapter : RvAdapter
-    private lateinit var invList : List<Invertion>
+    private var adapter = InversionAdapter()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,12 +33,14 @@ class TransactionsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentTransactionsBinding.inflate(inflater,container,false)
-        return binding.root
-
         loadInvertion()
-        rvAdapter = RvAdapter(invList)
-        binding.inverRecycler.adapter = rvAdapter
+        val invertionRecycler = binding.inverRecycler
+        invertionRecycler.setHasFixedSize(true)
+        invertionRecycler.layoutManager = LinearLayoutManager(activity)
+        invertionRecycler.adapter = adapter
 
+
+        return binding.root
     }
 
     private fun loadInvertion() {
