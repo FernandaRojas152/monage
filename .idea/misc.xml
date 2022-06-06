@@ -4,14 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.140625" />
-        <entry key="..\:/monage/app/src/main/res/layout/activity_navigation.xml" value="0.17" />
-        <entry key="..\:/monage/app/src/main/res/layout/activity_registration.xml" value="0.1" />
-        <entry key="..\:/monage/app/src/main/res/layout/activity_splash.xml" value="0.1" />
-        <entry key="..\:/monage/app/src/main/res/layout/dialog_market.xml" value="0.1" />
-        <entry key="..\:/monage/app/src/main/res/layout/fragment_community.xml" value="0.1" />
-        <entry key="..\:/monage/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/monage/app/src/main/res/layout/fragment_payments.xml" value="0.25" />
-        <entry key="..\:/monage/app/src/main/res/layout/fragment_transactions.xml" value="0.1" />
+        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/dialog_job.xml" value="0.2" />
+        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/dialog_market.xml" value="0.2" />
+        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/dialog_park.xml" value="0.22" />
+        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/dialog_spa.xml" value="0.2" />
+        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/fragment_community.xml" value="0.2" />
+        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/Ferna/Downloads/monage/app/src/main/res/layout/fragment_payments.xml" value="0.33" />
         <entry key="app/src/main/res/drawable/back_splash.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/backbtn.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/backet.xml" value="0.1645" />
