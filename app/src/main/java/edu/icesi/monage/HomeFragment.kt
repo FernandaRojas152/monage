@@ -80,6 +80,7 @@ class HomeFragment : Fragment() {
                 binding.energyTx.text = "${user.energy}/10"
                 binding.moneyTx.text = "$${user.money}"
                 binding.score.text = user.score.toString()
+                binding.textView17.text = user.days.toString() + "/30"
                 when(user.state){
                     "FANTASTIC"->{
                         binding.imageState.setImageResource(R.drawable.fantastico)

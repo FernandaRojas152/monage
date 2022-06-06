@@ -13,5 +13,6 @@ data class User(
     var funny:Int=0,
     var state:String = State.NEU,
     var moneyInv:Int=0,
-    var utilidad:Int=0
+    var utilidad:Int=0,
+    var days:Int = 0
 )
