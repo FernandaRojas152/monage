@@ -1,21 +1,16 @@
 package edu.icesi.monage
 
-import android.app.Activity
 import android.app.AlertDialog
-import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.view.*
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.lifecycleScope
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import edu.icesi.monage.databinding.FragmentHomeBinding
 import edu.icesi.monage.databinding.FragmentPaymentsBinding
 import edu.icesi.monage.model.State
 import edu.icesi.monage.model.User
@@ -123,7 +118,7 @@ class PaymentsFragment : Fragment() {
         */
 
       // dialogBuilder.show()
-        var accept: Button = dialog.findViewById(R.id.acceptTask)
+        var accept: Button = dialog.findViewById(R.id.acceptSpa)
         accept.setOnClickListener {
             dialog.dismiss()
         }
@@ -193,7 +188,18 @@ class PaymentsFragment : Fragment() {
     }
 
     fun showDialogJob(){
-        val options= arrayOf("Campaña de marketing", "Contabilidad", "Programación")
+        val dialogBuilder = AlertDialog.Builder(context)
+
+        dialogBuilder.setView(R.layout.dialog_job)
+        val dialog= dialogBuilder.create()
+        dialog.window?.setLayout(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT)
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog.window?.setGravity(Gravity.CENTER)
+        dialog.setCancelable(true)
+        dialog.window?.attributes?.windowAnimations= R.style.DialogAnimation
+
+        dialog.show()
+        /**val options= arrayOf("Campaña de marketing", "Contabilidad", "Programación")
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
         dialogBuilder.setTitle("Trabajo")
@@ -216,7 +222,7 @@ class PaymentsFragment : Fragment() {
             Toast.makeText(context, "Items selected are: " + Arrays.toString(selectedStrings.toTypedArray()), Toast.LENGTH_SHORT).show()
         }
 
-        dialogBuilder.show()
+        dialogBuilder.show()*/
 
         lifecycleScope.launch(Dispatchers.IO) {
             val user = Firebase.firestore
@@ -281,6 +287,16 @@ class PaymentsFragment : Fragment() {
     }
 
     fun showDialogPark(){
+        val dialogBuilder = AlertDialog.Builder(context)
+
+        dialogBuilder.setView(R.layout.dialog_park)
+        val dialog= dialogBuilder.create()
+        dialog.window?.setLayout(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT)
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog.window?.setGravity(Gravity.CENTER)
+        dialog.setCancelable(true)
+        dialog.window?.attributes?.windowAnimations= R.style.DialogAnimation
+        /**
         //montarse a la noria, montar montaña rusa, montar carros chocones, comprar comida
         val options= arrayOf("Montarse a la noria", "Montar montaña rusa", "Montar carros chocones", "Comprar comida")
         val selectedList = ArrayList<Int>()
@@ -306,6 +322,7 @@ class PaymentsFragment : Fragment() {
         }
 
         dialogBuilder.show()
+        */
         lifecycleScope.launch(Dispatchers.IO) {
             val user = Firebase.firestore
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
@@ -370,7 +387,17 @@ class PaymentsFragment : Fragment() {
     }
 
     fun showDialogSpa(){
-        //dormir, descansar, masaje
+        val dialogBuilder = AlertDialog.Builder(context)
+
+        dialogBuilder.setView(R.layout.dialog_spa)
+        val dialog= dialogBuilder.create()
+        dialog.window?.setLayout(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT)
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog.window?.setGravity(Gravity.CENTER)
+        dialog.setCancelable(true)
+        dialog.window?.attributes?.windowAnimations= R.style.DialogAnimation
+
+        /* dormir, descansar, masaje
         val options= arrayOf("Dormir", "Descansar", "Masaje")
         val selectedList = ArrayList<Int>()
         val dialogBuilder = AlertDialog.Builder(context)
@@ -395,6 +422,7 @@ class PaymentsFragment : Fragment() {
         }
 
         dialogBuilder.show()
+        */
         lifecycleScope.launch(Dispatchers.IO) {
             val user = Firebase.firestore
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
