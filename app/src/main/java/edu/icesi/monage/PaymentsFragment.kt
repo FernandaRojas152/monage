@@ -143,21 +143,39 @@ class PaymentsFragment : Fragment() {
                 }
                 if(user.energy <= 0){
                     if(user.days == 30) {
-                       user.score = 0
-                        user.money = 1500
-                        user.energy = 10
-                        user.food = 60
-                        user.days = 0
-                        user.state = "NEUTRAL"
+
 
 
                         //Aqui va que pasa cuando llegue a los 30 dias
+
+
+                        val dialogBuilder = AlertDialog.Builder(context)
+                        dialogBuilder.setTitle("Congratulations")
+                        dialogBuilder.setMessage("Felicidades, terminaste el juego con un score : "
+                                + user.score).setPositiveButton("Reintentar",{
+                            dialog,which ->
+                            user.score = 0
+                            user.money = 1500
+                            user.energy = 10
+                            user.food = 60
+                            user.days = 0
+                            user.state = "NEUTRAL"
+                            }).setNegativeButton("Gracias,estoy bien con mi score",{
+                              dialog,which -> dialog.dismiss()
+                        })
+
+                        dialogBuilder.show()
+
+
+                        }
+
 
 
                     }else{
                         user.days += 1
                         user.money += 1500
                         user.energy += 10
+                        user.score += 5*(user.food) +2*(user.hygiene) +user.funny
                     }
                 }
                 binding.progressFoodP.setProgress(user.food)
@@ -167,7 +185,7 @@ class PaymentsFragment : Fragment() {
                     .collection("users").document(Firebase.auth.currentUser!!.uid).set(user)
             }
 
-        }
+
     }
 
     fun showDialogJob(){
@@ -221,12 +239,22 @@ class PaymentsFragment : Fragment() {
 
                 if(user.energy <= 0) {
                     if (user.days == 30) {
-                        user.score = 0
-                        user.money = 1500
-                        user.energy = 10
-                        user.food = 60
-                        user.days = 0
-                        user.state = "NEUTRAL"
+                        val dialogBuilder = AlertDialog.Builder(context)
+                        dialogBuilder.setTitle("Congratulations")
+                        dialogBuilder.setMessage("Felicidades, terminaste el juego con un score : "
+                                + user.score).setPositiveButton("Reintentar",{
+                                dialog,which ->
+                            user.score = 0
+                            user.money = 1500
+                            user.energy = 10
+                            user.food = 60
+                            user.days = 0
+                            user.state = "NEUTRAL"
+                        }).setNegativeButton("Gracias,estoy bien con mi score",{
+                                dialog,which -> dialog.dismiss()
+                        })
+
+                        dialogBuilder.show()
 
 
                         //Aqui va que pasa cuando llegue a los 30 dias
@@ -236,6 +264,7 @@ class PaymentsFragment : Fragment() {
                         user.days += 1
                         user.money += 1500
                         user.energy += 10
+                        user.score += 5*(user.food) +2*(user.hygiene) +user.funny
                     }
                 }
                 binding.progressFoodP.setProgress(user.food)
@@ -278,7 +307,7 @@ class PaymentsFragment : Fragment() {
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
                 .toObject(User::class.java)!!
             if(user.energy>3 && user.money > 200){
-                user.energy -=3
+                user.energy -=1
                 user.money -=200
                 if(user.funny>70){
                     user.funny = 100
@@ -297,12 +326,22 @@ class PaymentsFragment : Fragment() {
                 }
                 if(user.energy <= 0) {
                     if (user.days == 30) {
-                        user.score = 0
-                        user.money = 1500
-                        user.energy = 10
-                        user.food = 60
-                        user.days = 0
-                        user.state = "NEUTRAL"
+                        val dialogBuilder = AlertDialog.Builder(context)
+                        dialogBuilder.setTitle("Congratulations")
+                        dialogBuilder.setMessage("Felicidades, terminaste el juego con un score : "
+                                + user.score).setPositiveButton("Reintentar",{
+                                dialog,which ->
+                            user.score = 0
+                            user.money = 1500
+                            user.energy = 10
+                            user.food = 60
+                            user.days = 0
+                            user.state = "NEUTRAL"
+                        }).setNegativeButton("Gracias,estoy bien con mi score",{
+                                dialog,which -> dialog.dismiss()
+                        })
+
+                        dialogBuilder.show()
 
 
                         //Aqui va que pasa cuando llegue a los 30 dias
@@ -312,6 +351,7 @@ class PaymentsFragment : Fragment() {
                         user.days += 1
                         user.money += 1500
                         user.energy += 10
+                        user.score += 5*(user.food) +2*(user.hygiene) +user.funny
                     }
                 }
                 binding.progressFoodP.setProgress(user.food)
@@ -378,12 +418,22 @@ class PaymentsFragment : Fragment() {
                 }
                 if(user.energy <= 0){
                     if(user.days == 30) {
-                        user.score = 0
-                        user.money = 1500
-                        user.energy = 10
-                        user.food = 60
-                        user.days = 0
-                        user.state = "NEUTRAL"
+                        val dialogBuilder = AlertDialog.Builder(context)
+                        dialogBuilder.setTitle("Congratulations")
+                        dialogBuilder.setMessage("Felicidades, terminaste el juego con un score : "
+                                + user.score).setPositiveButton("Reintentar",{
+                                dialog,which ->
+                            user.score = 0
+                            user.money = 1500
+                            user.energy = 10
+                            user.food = 60
+                            user.days = 0
+                            user.state = "NEUTRAL"
+                        }).setNegativeButton("Gracias,estoy bien con mi score",{
+                                dialog,which -> dialog.dismiss()
+                        })
+
+                        dialogBuilder.show()
 
 
                         //Aqui va que pasa cuando llegue a los 30 dias
@@ -393,6 +443,7 @@ class PaymentsFragment : Fragment() {
                         user.days += 1
                         user.money += 1500
                         user.energy += 10
+                        user.score += 5*(user.food) +2*(user.hygiene) +user.funny
                     }
                 }
                 binding.progressFoodP.setProgress(user.food)
