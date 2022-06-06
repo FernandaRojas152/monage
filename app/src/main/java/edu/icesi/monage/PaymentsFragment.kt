@@ -80,6 +80,7 @@ class PaymentsFragment : Fragment() {
     }
 
     fun showDialogMarket(){
+
         //R.layout.dialog_market
         //val appContext = requireContext().applicationContext
         //val view= View.inflate(context, R.layout.dialog_market,null)
