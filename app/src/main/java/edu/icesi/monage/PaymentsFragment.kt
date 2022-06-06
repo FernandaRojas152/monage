@@ -382,8 +382,13 @@ class PaymentsFragment : Fragment() {
                 Firebase.firestore
                     .collection("users").document(Firebase.auth.currentUser!!.uid).set(user)
 
+            }else{
+                val builder = AlertDialog.Builder(context)
+                builder.setMessage("Energia Insuficiente").setNegativeButton("Aceptar",{
+                        dialog,which -> dialog.dismiss()
+                })
             }
-             }
+        }
     }
 
     fun showDialogSpa(){
