@@ -141,6 +141,25 @@ class PaymentsFragment : Fragment() {
                 }else{
                     user.food +=30
                 }
+                if(user.energy <= 0){
+                    if(user.days == 30) {
+                       user.score = 0
+                        user.money = 1500
+                        user.energy = 10
+                        user.food = 60
+                        user.days = 0
+                        user.state = "NEUTRAL"
+
+
+                        //Aqui va que pasa cuando llegue a los 30 dias
+
+
+                    }else{
+                        user.days += 1
+                        user.money += 1500
+                        user.energy += 10
+                    }
+                }
                 binding.progressFoodP.setProgress(user.food)
                 binding.progressFunP.setProgress(user.funny)
                 binding.progressHygieneP.setProgress(user.hygiene)
@@ -199,6 +218,26 @@ class PaymentsFragment : Fragment() {
                 }else{
                     user.hygiene -= 30
                 }
+
+                if(user.energy <= 0) {
+                    if (user.days == 30) {
+                        user.score = 0
+                        user.money = 1500
+                        user.energy = 10
+                        user.food = 60
+                        user.days = 0
+                        user.state = "NEUTRAL"
+
+
+                        //Aqui va que pasa cuando llegue a los 30 dias
+
+
+                    } else {
+                        user.days += 1
+                        user.money += 1500
+                        user.energy += 10
+                    }
+                }
                 binding.progressFoodP.setProgress(user.food)
                 binding.progressFunP.setProgress(user.funny)
                 binding.progressHygieneP.setProgress(user.hygiene)
@@ -255,6 +294,25 @@ class PaymentsFragment : Fragment() {
                     user.hygiene=0
                 }else{
                     user.hygiene -=20
+                }
+                if(user.energy <= 0) {
+                    if (user.days == 30) {
+                        user.score = 0
+                        user.money = 1500
+                        user.energy = 10
+                        user.food = 60
+                        user.days = 0
+                        user.state = "NEUTRAL"
+
+
+                        //Aqui va que pasa cuando llegue a los 30 dias
+
+
+                    } else {
+                        user.days += 1
+                        user.money += 1500
+                        user.energy += 10
+                    }
                 }
                 binding.progressFoodP.setProgress(user.food)
                 binding.progressFunP.setProgress(user.funny)
@@ -317,6 +375,25 @@ class PaymentsFragment : Fragment() {
                     user.hygiene = 100
                 }else{
                     user.hygiene +=30
+                }
+                if(user.energy <= 0){
+                    if(user.days == 30) {
+                        user.score = 0
+                        user.money = 1500
+                        user.energy = 10
+                        user.food = 60
+                        user.days = 0
+                        user.state = "NEUTRAL"
+
+
+                        //Aqui va que pasa cuando llegue a los 30 dias
+
+
+                    }else{
+                        user.days += 1
+                        user.money += 1500
+                        user.energy += 10
+                    }
                 }
                 binding.progressFoodP.setProgress(user.food)
                 binding.progressFunP.setProgress(user.funny)
