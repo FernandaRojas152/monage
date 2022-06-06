@@ -6,6 +6,7 @@ import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.*
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
@@ -83,10 +84,10 @@ class PaymentsFragment : Fragment() {
         //val appContext = requireContext().applicationContext
         //val view= View.inflate(context, R.layout.dialog_market,null)
         val dialogBuilder = AlertDialog.Builder(context)
-        val view= layoutInflater.inflate(R.layout.dialog_market,null)
+        //val view= layoutInflater.inflate(R.layout.dialog_market,null)
+
         dialogBuilder.setView(R.layout.dialog_market)
         val dialog= dialogBuilder.create()
-
         dialog.window?.setLayout(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT)
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         dialog.window?.setGravity(Gravity.CENTER)
@@ -94,8 +95,6 @@ class PaymentsFragment : Fragment() {
         dialog.window?.attributes?.windowAnimations= R.style.DialogAnimation
 
         dialog.show()
-
-
 
 
         //comprar frutas, comprar verduras, comprar carne
@@ -123,7 +122,12 @@ class PaymentsFragment : Fragment() {
         }
         */
 
-        dialogBuilder.show()
+      // dialogBuilder.show()
+        var accept: Button = dialog.findViewById(R.id.acceptTask)
+        accept.setOnClickListener {
+            dialog.dismiss()
+        }
+
         lifecycleScope.launch(Dispatchers.IO) {
             val user = Firebase.firestore
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
