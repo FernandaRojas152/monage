@@ -21,12 +21,14 @@ class InversionAdapter :  RecyclerView.Adapter<InversionViewHolder>(){
 
         val invertion = invertions[position]
         holder.nameInv.text = invertion.nameInv
-        holder.costInv.text = invertion.costInv
+        holder.costInv.text = ""+invertion.costInv
 
     }
 
     fun addInvertion(publication:Invertion){
         invertions.add(publication)
+        notifyItemInserted(invertions.lastIndex)
+
     }
 
     override fun getItemCount(): Int {

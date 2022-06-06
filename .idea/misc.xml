@@ -3,10 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_home.xml" value="0.264" />
-        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_payments.xml" value="0.1" />
-        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/fragment_transactions.xml" value="0.1" />
-        <entry key="..\:/Users/kmilo/OneDrive/Documentos/8-Semestre/AppsMoviles/monage/app/src/main/res/layout/inver_item.xml" value="0.264" />
         <entry key="app/src/main/res/drawable/back_splash.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/backbtn.xml" value="0.1705" />
         <entry key="app/src/main/res/drawable/backet.xml" value="0.1645" />
@@ -16,15 +12,20 @@
         <entry key="app/src/main/res/layout/activity_navigation.xml" value="0.1005014625992478" />
         <entry key="app/src/main/res/layout/activity_registration.xml" value="0.11759033203125004" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.17724660237630208" />
-        <entry key="app/src/main/res/layout/dialog_market.xml" value="0.2189732869466146" />
-        <entry key="app/src/main/res/layout/fragment_community.xml" value="0.6743860451187791" />
+        <entry key="app/src/main/res/layout/dialog_market.xml" value="0.1149887084960936" />
+        <entry key="app/src/main/res/layout/fragment_community.xml" value="0.10048467793127902" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21483862080237265" />
-        <entry key="app/src/main/res/layout/fragment_payments.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_payments.xml" value="0.170361328125" />
+        <entry key="app/src/main/res/layout/fragment_transactions.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/inver_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/invertionrow.xml" value="0.3154815673828125" />
+        <entry key="app/src/main/res/layout/usersummary.xml" value="0.12418670654296876" />
+        <entry key="app/src/main/res/menu/menuapp.xml" value="0.37045135498046877" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>

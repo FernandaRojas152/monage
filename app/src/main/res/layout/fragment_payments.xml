@@ -153,15 +153,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constrainMap"
-        android:layout_width="400dp"
-        android:layout_height="445dp"
+        android:layout_width="398dp"
+        android:layout_height="525dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/map"
         app:layout_constraintBottom_toTopOf="@+id/imageView28"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20"
-        app:layout_constraintVertical_bias="0.853">
+        app:layout_constraintTop_toBottomOf="@+id/imageView20">
 
         <Button
             android:id="@+id/market"
@@ -207,6 +206,7 @@
             android:id="@+id/job"
             android:layout_width="65dp"
             android:layout_height="65dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/job"
             app:layout_constraintEnd_toEndOf="parent"
