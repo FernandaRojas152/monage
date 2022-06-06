@@ -51,6 +51,7 @@ class TransactionsFragment : Fragment() {
             }
         }
 
+
         return binding.root
     }
 
@@ -79,5 +80,10 @@ class TransactionsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            adapter.clear()
+        }
+
     }
 }
