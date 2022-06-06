@@ -306,9 +306,10 @@ class PaymentsFragment : Fragment() {
             val user = Firebase.firestore
                 .collection("users").document(Firebase.auth.currentUser!!.uid).get().await()
                 .toObject(User::class.java)!!
-            if(user.energy>3 && user.money > 200){
+            //Hay la plata no deberia ser 0 -----------------
+            if(user.energy>=1 && user.money >= 0){
                 user.energy -=1
-                user.money -=200
+                //user.money -=200
                 if(user.funny>70){
                     user.funny = 100
                 }else{
