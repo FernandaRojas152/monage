@@ -29,7 +29,7 @@
                 android:textStyle="bold" />
 
             <RadioButton
-                android:id="@+id/verduras"
+                android:id="@+id/noria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text1"
@@ -39,27 +39,27 @@
                 android:textStyle="bold"></RadioButton>
 
             <RadioButton
-                android:id="@+id/frutas"
+                android:id="@+id/rusa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/verduras"
+                android:layout_below="@id/noria"
                 android:layout_marginTop="5dp"
                 android:text="Contabilidad"
                 android:textSize="12dp"
                 android:textStyle="bold"></RadioButton>
 
             <RadioButton
-                android:id="@+id/carne"
+                android:id="@+id/chocones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/frutas"
+                android:layout_below="@id/rusa"
                 android:layout_marginTop="5dp"
                 android:text="Programación"
                 android:textSize="12dp"
                 android:textStyle="bold"></RadioButton>
 
             <Button
-                android:id="@+id/acceptTask"
+                android:id="@+id/acceptJob"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="14dp"
                 android:layout_marginTop="180dp"
-                android:layout_toRightOf="@id/verduras"
+                android:layout_toRightOf="@id/noria"
                 android:background="@drawable/backtxt"
                 android:text="-3"
                 android:textAlignment="center"
@@ -92,7 +92,7 @@
                 android:layout_below="@+id/textView3"
                 android:layout_marginLeft="14dp"
                 android:layout_marginTop="24dp"
-                android:layout_toRightOf="@id/verduras"
+                android:layout_toRightOf="@id/noria"
                 android:background="@drawable/backtxt"
                 android:text="-5"
                 android:textAlignment="center"
@@ -105,11 +105,11 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView5"
-                android:layout_alignBottom="@+id/carne"
+                android:layout_alignBottom="@+id/chocones"
                 android:layout_marginLeft="13dp"
                 android:layout_marginTop="26dp"
                 android:layout_marginBottom="7dp"
-                android:layout_toRightOf="@id/verduras"
+                android:layout_toRightOf="@id/noria"
                 android:background="@drawable/backtxt"
                 android:text="-4"
                 android:textAlignment="center"
